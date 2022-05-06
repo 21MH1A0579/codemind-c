@@ -1,15 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,temp;
-    scanf("%d",&n);
-   for(i=1;i<=n;i++)
-   {
-    for(j=1;j<=i;j++)
-    {
-    	printf("%d",j);
-	}
-	printf("
+	char x;
+	int n,temp,i;
+	scanf("%d",&n);
+	x=65;
+	temp=x;
+	while(temp<x+n)
+	{
+    	for(i=1;i<=n;i++)
+	   {
+	       printf("%c ",temp);
+       }
+       printf("
 ");
+     temp++;
     }
 }
