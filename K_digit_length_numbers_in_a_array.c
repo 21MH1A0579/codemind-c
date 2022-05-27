@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int n,arr[100],i,temp,c=0,dc=0,k;
+    scanf("%d",&n);
+    scanf("%d",&k);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        c=0;
+        if(arr[i]==0)
+        {
+            c++;
+        }
+        temp=arr[i];
+        while(temp)
+        {
+            c++;
+            temp=temp/10;
+        }
+        if(c==k)
+        {
+           dc++;
+        }
+    }
+    printf("%d",dc);
+}
