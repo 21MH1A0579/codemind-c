@@ -1,18 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j;
+    int n,i,j,arr[100];
+    int ch;
     scanf("%d",&n);
+    ch=65+n-1;
     for(i=1;i<=n;i++)
     {
-        for(j=1;j<=n-2;j++)
+        for(j=n;j>=i;j--)
         {
-            printf("%d",j);
+            printf("%c ",ch);
         }
-        for(j=n-3;j>=1;j--)
-        {
-            printf("%d",j);
-        }
+        ch--;
         printf("
 ");
     }
