@@ -18,28 +18,25 @@ int prime(int n)
            c=1;
         }
     }
-    if(c==0)
+    if(c==1)
     {
         return 1;
     }
     return 1;
 }
-
 int main()
 {
-    int n,arr[100],i,k,res,c=0;
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&arr[i]);
-    }
-    scanf("%d",&k);
-    for(i=0;i<n;i++)
-    {
-        if(prime(arr[i]))
-        {
-        		c++;
-		}
-    }
-    printf("%d",c);
+	int n,i,arr[100],c=0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+	    scanf("%d",&arr[i]);
+	    if(prime(arr[i]))
+	    {
+	       c++;
+	    }
+	}
+	printf("%d",c);
 }
+	
+	
