@@ -1,21 +1,32 @@
 #include<stdio.h>
-#include<math.h>
+int reverse(int n)
+{
+    int r,rev=0;
+    while(n)
+    {
+        r=n%10;
+        rev=rev*10+r;
+        n=n/10;
+    }
+ return rev;  
+}
 int main()
 {
-    int n,d,r,flag=0;
-    scanf("%d",&n);
-    d=(int)log10(n);
-    while(n>0)
+    int rem,num,c=0,temp;
+    scanf("%d",&num);
+    temp=reverse(num);
+    while(temp)
     {
-       r=n/(int)ceil(pow(10,d));
-       if(r==6&&flag==0)
-       {
-           printf("9");
-           flag=1;
-       }
-       else
-         printf("%d",r);
-         n=n%(int)ceil(pow(10,d));
-         d--;
+        rem=temp%10;
+        if(rem==6 &&c==0)
+        {
+            printf("9");
+            c=1;
+        }
+        else
+        {
+            printf("%d",rem);
+        }
+        temp=temp/10;
     }
 }
