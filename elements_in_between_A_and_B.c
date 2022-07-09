@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,arr[100],a,b,j,sum=0,min=99999,c=0;
+    int n,i,arr[100],a,b,j,sum=0,max=0,c=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
@@ -14,8 +14,8 @@ int main()
         {
             if(arr[i]==j)
             {
-                c=1;
               printf("%d ",arr[i]);
+              c=1;
             }
         }
     }
